@@ -103,13 +103,14 @@ Server built:   2016-10-06T00:00:00
 		2. `/etc/php/5.6/apache2/php.ini`
 			* Under `Dynamic Extensions` add the following
 			* `extension=redis.so`
+    * Modify `/etc/php/5.6/apache2/php.ini` for
+        * `session.save_handler = redis`
+        * `session.save_path = "tcp://localhost:6379?weight=1&timeout=5”`
+
 	* Test with `redis-server --version`
 ```
-Redis server v=3.0.7 sha=00000000:0 malloc=jemalloc-3.6.0 bits=64 build=49ffd7ce21c94625 
+Redis server v=3.0.7 sha=00000000:0 malloc=jemalloc-3.6.0 bits=64 build=49ffd7ce21c94625
 ```
-	* Modify `/etc/php/5.6/apache2/php.ini` for
-		* `session.save_handler = redis`
-		* `session.save_path = "tcp://localhost:6379?weight=1&timeout=5”`
 
 * *Install ImageMagick*
 	* `sudo apt-get install -y imagemagick`
