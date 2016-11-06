@@ -64,7 +64,8 @@ Zend Engine v2.6.0, Copyright (c) 1998-2016 Zend Technologies
 [intl]
 intl.default_locale = en_utf8	
 ```
-	* Test with `php -v`
+* Validate
+    * Test with `php -v`
 ```
 PHP 5.6.27-1+deb.sury.org~precise+1 (cli)
 Copyright (c) 1997-2016 The PHP Group
@@ -192,6 +193,7 @@ export DB_PASS=reverse
 Could not open input file: artisan
 Script php artisan clear-compiled handling the post-install-cmd event returned with error code 1 
 ```
+* *Set up the `chgenv` script*
 	* `cd /srv/reversal/script/bin`
 	* `bash chgenv setup`
 	* `cd ~/`
@@ -241,7 +243,8 @@ return array(
 127.0.0.1       reversal.vagrant.vm    laravel.innovedv2api.vm
 127.0.1.1       www precise64
 ```
-	* Now `exit` from the vagrant’s ssh session and edit your PC’s `hosts` file.
+* Set hosts file for your PC
+	* `exit` from the vagrant’s ssh session and edit your PC’s `hosts` file.
 		* On Linux and OSX `/etc/hosts`
 		* On Windows `C:\Windows\system32\drivers\etc\hosts`
 		* Add the following line:
