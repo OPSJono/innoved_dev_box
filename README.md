@@ -33,7 +33,7 @@
 	* `sudo add-apt-repository ppa:chris-lea/redis-server`
 	* `sudo apt-get update`
 
-* 	 *Install PHP*
+* *Install PHP*
 	* `sudo apt-get install -y php5.6 php5.6-cli dh-make-php php5.6-dev`
 	* `sudo apt-get install -y php5.6-mbstring php5.6-mcrypt php5.6-mysql php5.6-xml php5.6-curl php5.6-gd php5.6-gmp php5.6-imap php5.6-tidy php5.6-intl php5.6-bcmath`
 	* Verify with `php -v`
@@ -44,21 +44,22 @@ Zend Engine v2.6.0, Copyright (c) 1998-2016 Zend Technologies
     with Zend OPcache v7.0.6-dev, Copyright (c) 1999-2016, by Zend Technologies
 ```
 
-* *Configure PHP*
-	* Modify `/etc/php/5.6/cli/php.ini`  for
-		* date.timezone = "Europe/London"
-		* date.default_latitude = 53.5448
-		* date.default_longitude = -2.6318
-		* memory_limit = 1024M
-	
-	* Modify `/etc/php/5.6/apache2/php.ini`  for
-    		* date.timezone = “Europe/London”
-		* date.default_latitude = 53.5448
-		* date.default_longitude = -2.6318
-		* memory_limit = 1024M
-		* post_max_size = 512M
-		* upload_max_filesize = 512M
-		* expose_php = Off
+* Configure PHP
+	* Set php.ini values.
+	* Modify `/etc/php/5.6/cli/php.ini` for
+        * date.timezone = "Europe/London"
+        * date.default_latitude = 53.5448
+        * date.default_longitude = -2.6318
+        * memory_limit = 1024M
+    
+    * Modify `/etc/php/5.6/apache2/php.ini`  for
+        * date.timezone = “Europe/London”
+        * date.default_latitude = 53.5448
+        * date.default_longitude = -2.6318
+        * memory_limit = 1024M
+        * post_max_size = 512M
+        * upload_max_filesize = 512M
+        * expose_php = Off
 	* Modify `/etc/php5/cli/conf.d/20-intl.ini` add the following
 ```
 [intl]
