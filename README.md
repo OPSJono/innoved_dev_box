@@ -35,7 +35,7 @@
 
 * 	 *Install PHP*
 	* `sudo apt-get install -y php5.6 php5.6-cli dh-make-php php5.6-dev`
-	* `sudo apt-get install -y php5.6-mbstring php5.6-mcrypt php5.6-mysql php5.6-xml php5.6-curl php5.6-gd php5.6-gmp php5.6-imap php5.6-tidy php5.6-intl`
+	* `sudo apt-get install -y php5.6-mbstring php5.6-mcrypt php5.6-mysql php5.6-xml php5.6-curl php5.6-gd php5.6-gmp php5.6-imap php5.6-tidy php5.6-intl php5.6-bcmath`
 	* Verify with `php -v`
 ```
 PHP 5.6.27-1+deb.sury.org~precise+1 (cli)
