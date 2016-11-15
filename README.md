@@ -159,6 +159,7 @@ export INNOVED_PUBLIC_PATH=/srv/reversal/public
 export INNOVED_CONFIG_PATH=/srv/reversal/config
 export INNOVED_DATA_PATH=/srv/reversal/data
 export INNOVED_CODE_PATH=/srv/reversal/src
+export INNOVED_APP_PATH=/srv/reversal/api/laravel/app
 export LARAVEL_ENVIRONMENT=development
 export DB_USR=root
 export DB_PASS=reverse
