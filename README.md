@@ -60,7 +60,7 @@ Zend Engine v2.6.0, Copyright (c) 1998-2016 Zend Technologies
         * post_max_size = 512M
         * upload_max_filesize = 512M
         * expose_php = Off
-	* Modify `/etc/php5/cli/conf.d/20-intl.ini` add the following
+	* Modify `/etc/php/5.6/cli/conf.d/20-intl.ini` add the following
 ```
 [intl]
 intl.default_locale = en_utf8	
