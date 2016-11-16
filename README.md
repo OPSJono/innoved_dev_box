@@ -155,7 +155,7 @@ mysql  Ver 14.14 Distrib 5.6.32, for debian-linux-gnu (x86_64) using  EditLine w
 	* `ln -s /srv/reversal/api/laravel ~/reversal`
 	* Edit `~/.bashrc`  and add the following to the bottom of the file
 ```
-export INNOVED_PUBLIC_PATH=/srv/reversal/public
+export INNOVED_PUBLIC_PATH=/srv/reversal/api/laravel/public
 export INNOVED_CONFIG_PATH=/srv/reversal/config
 export INNOVED_DATA_PATH=/srv/reversal/data
 export INNOVED_CODE_PATH=/srv/reversal/src
