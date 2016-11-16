@@ -147,7 +147,7 @@ mysql  Ver 14.14 Distrib 5.6.32, for debian-linux-gnu (x86_64) using  EditLine w
 ```
 
 * *Install Composer*
-	* `curl -sS https://getcomposer.org/installer | sudo php — —install-dir=/usr/local/bin —filename=composer`
+	* `curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer`
 	* `sudo chown -R $USER $HOME/.composer`
 	
 * *Set some Environment variables*
