@@ -201,6 +201,8 @@ Script php artisan clear-compiled handling the post-install-cmd event returned w
 	* `cd ~/`
 	* The `chgenv` command can now be ran from anywhere.
 	* Change to an environment with `chgenv <env name>`
+	
+* Session.php
 	* Create `~/reversal/app/config/development/session.php` with the following content:
 ```
 <?php
@@ -236,6 +238,32 @@ return array(
         'secure' => false,
 
 ); 
+```
+
+* Queue.php
+
+    * Create `~/reversal/app/config/development/queue.php` with the following content:
+```
+<?php
+
+return array(
+
+	/*
+	|--------------------------------------------------------------------------
+	| Default Queue Driver
+	|--------------------------------------------------------------------------
+	|
+	| The Laravel queue API supports a variety of back-ends via an unified
+	| API, giving you convenient access to each back-end using the same
+	| syntax for each one. Here you may set the default queue driver.
+	|
+	| Supported: "sync", "beanstalkd", "sqs", "iron"
+	|
+	*/
+
+	'default' => 'redis',
+
+);
 ```
 
 * *Set hosts file values*
