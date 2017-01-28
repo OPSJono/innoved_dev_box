@@ -17,6 +17,8 @@
 ## Start and SSH into the VM
 * `cd ~/code/innoved/vle2/vagrant`
 * `vagrant up`
+    * If you're on a Linux host and get an error about your system not supporting NFS.
+    * `sudo apt-get install portmap nfs-kernel-server`
 * `vagrant ssh`
 
 ## Setting up the VM
