@@ -15,6 +15,27 @@
 	* `git clone --progress -o origin git@github.com:innoved/VLE2.git -b develop ~/code/innoved/vle2`
 
 ## Start and SSH into the VM
+
+* Linux users may want to add the following to the `/etc/sudoers` file:
+    ```
+    Cmnd_Alias VAGRANT_EXPORTS_ADD = /usr/bin/tee -a /etc/exports
+    Cmnd_Alias VAGRANT_EXPORTS_COPY = /bin/cp /tmp/exports /etc/exports
+    Cmnd_Alias VAGRANT_NFSD_CHECK = /etc/init.d/nfs-kernel-server status
+    Cmnd_Alias VAGRANT_NFSD_START = /etc/init.d/nfs-kernel-server start
+    Cmnd_Alias VAGRANT_NFSD_APPLY = /usr/sbin/exportfs -ar
+    Cmnd_Alias VAGRANT_EXPORTS_REMOVE = /bin/sed -r -e * d -ibak /tmp/exports
+    %sudo ALL=(root) NOPASSWD: VAGRANT_EXPORTS_ADD, VAGRANT_NFSD_CHECK, VAGRANT_NFSD_START, VAGRANT_NFSD_APPLY, VAGRANT_EXPORTS_REMOVE, VAGRANT_EXPORTS_COPY
+    ```
+* OSX users may want to add the following to the `/etc/sudoers` file:
+    ```
+    Cmnd_Alias VAGRANT_EXPORTS_ADD = /usr/bin/tee -a /etc/exports
+    Cmnd_Alias VAGRANT_NFSD = /sbin/nfsd restart
+    Cmnd_Alias VAGRANT_EXPORTS_REMOVE = /usr/bin/sed -E -e /*/ d -ibak /etc/exports
+    %admin ALL=(root) NOPASSWD: VAGRANT_EXPORTS_ADD, VAGRANT_NFSD, VAGRANT_EXPORTS_REMOVE
+    ```
+    See the Vagrant Docs about NFS Shares [here](https://www.vagrantup.com/docs/synced-folders/nfs.html)
+
+
 * `cd ~/code/innoved/vle2/vagrant`
 * `vagrant up`
     * If you're on a Linux host and get an error about your system not supporting NFS.
@@ -26,7 +47,7 @@
 	* `sudo apt-get update`
 	* `sudo apt-get -y upgrade`
 		* When asked to configure GRUB select `VBOX_HEADDISK`
-	* `sudo apt-get install -y python-software-properties git yasm build-essential pkg-config ntp curl vim software-properties-common`
+	* `sudo apt-get install -y python-software-properties git yasm build-essential pkg-config ntp curl vim zip unzip software-properties-common`
 	
 * *Add some PPA’s for PHP Apache and MySQL*
 	* `sudo LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php`
