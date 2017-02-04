@@ -16,7 +16,8 @@
 
 ## Start and SSH into the VM
 
-* Linux users may want to add the following to the `/etc/sudoers` file:
+* Ubuntu based users may want to add the following to the `/etc/sudoers` file:
+
     ```
     Cmnd_Alias VAGRANT_EXPORTS_ADD = /usr/bin/tee -a /etc/exports
     Cmnd_Alias VAGRANT_EXPORTS_COPY = /bin/cp /tmp/exports /etc/exports
