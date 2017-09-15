@@ -14,9 +14,15 @@
 * Clone the Repo
 	* `git clone --progress -o origin git@github.com:innoved/VLE2.git -b develop ~/code/innoved/vle2`
 
-## Useful bash loop
+## Useful bash commands
 ```
 for i in emslfe emspl proconw;do echo $i;done
+
+~/code/innoved/utilities/playbooks$ ./livecmd.sh "/home/ubuntu/tools/emsDeploy.sh -e emsrfl -b master"
+~/code/innoved/utilities/playbooks$ ansible demo_servers -m shell -f 8 -a "/home/ubuntu/tools/emsDeploy.sh -e proconw -b master"
+
+jon@Innoved Web #1:/home/innoved/vle/emslfe/api/laravel: cd ../../../emsrfl/api/laravel && . setEnvironment && php artisan migrate --database=migrations
+
 ```
 
 ## Start and SSH into the VM
