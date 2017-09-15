@@ -14,6 +14,11 @@
 * Clone the Repo
 	* `git clone --progress -o origin git@github.com:innoved/VLE2.git -b develop ~/code/innoved/vle2`
 
+## Useful bash loop
+```
+for i in emslfe emspl proconw;do echo $i;done
+```
+
 ## Start and SSH into the VM
 
 * Ubuntu based users may want to add the following to the `/etc/sudoers` file:
